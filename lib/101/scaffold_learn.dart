@@ -18,18 +18,33 @@ class ScaffoldLearn extends StatelessWidget {
                     height: 200,
                   ));
         },
+        backgroundColor: Colors.white,
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: const Drawer(),
       bottomNavigationBar: Container(
         height: 100,
-        decoration: ProjectContainerDecoration(),
+        decoration: BoxDecoration(
+            color: Colors.red,
+            border: Border.all(color: Colors.red, width: 5),
+            borderRadius: const BorderRadius.all(Radius.circular(10))),
         child: BottomNavigationBar(items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.abc_outlined), label: "home"),
+            icon: Icon(
+              Icons.abc_outlined,
+              color: Colors.white,
+              size: 50,
+            ),
+            label: "home",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.abc_outlined), label: "settings"),
+              icon: Icon(
+                Icons.abc_outlined,
+                color: Colors.white,
+                size: 50,
+              ),
+              label: "settings"),
         ]),
       ),
     );
